@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {BarService} from '@my/lib';
+import {Observable} from "rxjs/Observable";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+    value$: Observable<string>;
+
+    constructor(private bar: BarService) {
+        this.value$ = bar.value;
+    }
+
 }

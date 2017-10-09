@@ -1,0 +1,11 @@
+{
+  "name": "@my/lib",
+  "version": "1.0.0-alpha.0",
+  "author": "Philippe Schild",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "@angular/core": "^4.2.4",
+    "@angular/common": "^4.2.4"
+  }
+}
