@@ -1,10 +1,18 @@
 {
   "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "paths": {
+      "@my/lib": [ "../dist/my-lib" ]
+    }
+  },
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "paths": {
+      "@my/lib": [ "../dist/my-lib" ]
+    }
   },
   "exclude": [
     "test.ts",
