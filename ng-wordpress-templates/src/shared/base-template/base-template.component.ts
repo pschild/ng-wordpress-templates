@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-    selector: 'app-base-template',
+    selector: 'ngwt-base-template',
     template: ``,
     styles: []
 })

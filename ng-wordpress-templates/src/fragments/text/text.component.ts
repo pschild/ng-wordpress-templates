@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-text',
+  selector: 'ngwt-text',
   template: `
       <h1>{{data.title.rendered}}</h1>
       <p [innerHtml]="data.acf.content | safeHtml"></p>

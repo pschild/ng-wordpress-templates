@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
 
 @Component({
-    selector: 'app-tpl-text',
+    selector: 'ngwt-tpl-text',
     template: `
-        <app-text [data]="data"></app-text>
+        <ngwt-text [data]="data"></ngwt-text>
     `,
     styleUrls: ['./tpl-text.component.scss']
 })
