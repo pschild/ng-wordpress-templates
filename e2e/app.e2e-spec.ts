@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('packagr App', () => {
+describe('ng-wordpress-templates-demo App', () => {
   let page: AppPage;
 
   beforeEach(() => {
