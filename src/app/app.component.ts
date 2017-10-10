@@ -3,6 +3,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app-root',
     template: `
+        <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>
         <ngwt-tpl-text [data]="textData" [params]="params"></ngwt-tpl-text>
         <ngwt-tpl-timeline [data]="timelineData" [params]="params"></ngwt-tpl-timeline>
     `,
@@ -20,6 +21,12 @@ export class AppComponent {
     };
 
     timelineData = {};
+
+    projectsData = {
+        acf: {
+            project_ids: [41, 42]
+        }
+    };
 
     params = null;
 

@@ -3,7 +3,7 @@ import {KeyCode} from "../../enums/key-code.enum";
 import {MediaService} from "../../shared/media/media.service";
 
 @Component({
-    selector: 'app-media-slider',
+    selector: 'ngwt-media-slider',
     host: {'(window:keyup)': 'handleKeyDown($event)'},
     templateUrl: './media-slider.component.html',
     styleUrls: ['./media-slider.component.scss']

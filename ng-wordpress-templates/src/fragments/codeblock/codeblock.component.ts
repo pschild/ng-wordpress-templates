@@ -2,7 +2,7 @@ import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewEncapsulation} 
 import * as hljs from 'highlight.js';
 
 @Component({
-    selector: 'app-codeblock',
+    selector: 'ngwt-codeblock',
     template: `
         <h2>{{postItem.title.rendered}}</h2>
         <p [innerHtml]="postItem.acf.content | safeHtml"></p>
