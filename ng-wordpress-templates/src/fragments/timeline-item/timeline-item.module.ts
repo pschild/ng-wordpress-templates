@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TimelineItemComponent} from "./timeline-item.component";
-import {TimelineService} from "./timeline.service";
 import {PipesModule} from "../../pipes/pipes.module";
 import {HttpModule} from "@angular/http";
 
@@ -16,9 +15,6 @@ import {HttpModule} from "@angular/http";
     ],
     exports: [
         TimelineItemComponent
-    ],
-    providers: [
-        TimelineService
     ]
 })
 export class TimelineItemModule {

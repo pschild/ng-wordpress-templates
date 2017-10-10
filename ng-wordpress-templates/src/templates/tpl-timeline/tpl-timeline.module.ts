@@ -1,8 +1,10 @@
-import {ModuleWithProviders, NgModule} from '@angular/core';
+import {InjectionToken, ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TplTimelineComponent} from "./tpl-timeline.component";
 import {TimelineItemModule} from "../../fragments/timeline-item/timeline-item.module";
 import {TimelineService} from "../../fragments/timeline-item/timeline.service";
+
+export const BASE_URL = new InjectionToken<string>('BASE_URL');
 
 @NgModule({
     imports: [
@@ -18,12 +20,13 @@ import {TimelineService} from "../../fragments/timeline-item/timeline.service";
 })
 export class TplTimelineModule {
 
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(baseUrl: string): ModuleWithProviders {
 
         return {
             ngModule: TplTimelineModule,
             providers: [
-                TimelineService
+                TimelineService,
+                { provide: BASE_URL, useValue: baseUrl }
             ]
         };
     }

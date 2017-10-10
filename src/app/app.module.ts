@@ -11,7 +11,7 @@ import {TplTextModule, TplTimelineModule} from '@ngWordpressTemplates';
     imports: [
         BrowserModule,
         TplTextModule.forRoot(),
-        TplTimelineModule.forRoot()
+        TplTimelineModule.forRoot('http://wp.pschild.de/wp-json')
     ],
     providers: [],
     bootstrap: [AppComponent]
