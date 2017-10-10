@@ -1,0 +1,233 @@
+.grid {
+  .grid-item-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    /* for squared images */
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    .grid-item {
+      position: absolute;
+      cursor: pointer;
+
+      background-color: #ddd;
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      -webkit-filter: blur(0);
+      filter: blur(0);
+
+      &:hover {
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+
+        & ~ .caption {
+          height: 50px;
+          opacity: .8;
+        }
+      }
+
+      transition: all 0.5s;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      margin-top: -100%;
+      background: #000;
+      z-index: 1;
+      color: #fff;
+      opacity: 0;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 90%;
+      padding: 0 5%;
+
+      transition: all 0.5s;
+    }
+  }
+}
+
+/* Grid, using NO CSS grid
+ * =============================== */
+.grid.legacy {
+  .grid-item-wrapper {
+    width: 16.6666%;
+    display: inline-block;
+    vertical-align: top;
+
+    .grid-item {
+      width: 98%;
+      height: 98%;
+      top: 1%;
+      left: 1%;
+    }
+  }
+}
+
+/* Grid, using CSS grid
+ * =============================== */
+.grid.modern {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: start;
+  justify-items: center;
+  grid-gap: 5px;
+
+  .grid-item-wrapper {
+    width: 100%;
+
+    .grid-item {
+      width: 100%;
+      height: 100%;
+      margin-top: -100%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid.modern {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid.legacy .grid-item-wrapper {
+    width: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid.modern {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid.legacy .grid-item-wrapper {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid.modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid.legacy .grid-item-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid.modern {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.legacy .grid-item-wrapper {
+    width: 100%;
+  }
+}
+
+/* Modal
+ * =============================== */
+input[name=gallery-radios] {
+  display: none;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, .9);
+  //transition: opacity .25s ease;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+
+.modal-state:checked + .modal .modal__inner {
+  top: 0;
+}
+
+.modal__inner {
+  //transition: top .25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  color: #fff;
+}
+
+.modal__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 35px;
+  text-align: center;
+  z-index: 201;
+}
+
+.modal__next-btn, .modal__prev-btn {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 35px;
+  text-align: center;
+  z-index: 201;
+}
+
+.modal__next-btn {
+  right: 10px;
+}
+
+.modal__prev-btn {
+  left: 10px;
+}
+
+.counter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 101;
+}
+
+.fb-share-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 101;
+}

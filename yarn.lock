@@ -323,6 +323,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular2-infinite-scroll@^0.3.5:
+  version "0.3.43"
+  resolved "https://registry.yarnpkg.com/angular2-infinite-scroll/-/angular2-infinite-scroll-0.3.43.tgz#f7205c228d0de8a2df560089586b0ef7f571c0b6"
+
 ansi-escapes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
@@ -2634,6 +2638,10 @@ gulplog@^1.0.0:
   dependencies:
     glogg "^1.0.0"
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+
 handle-thing@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"
@@ -2772,6 +2780,10 @@ heimdalljs@^0.2.0, heimdalljs@^0.2.4:
   resolved "https://registry.yarnpkg.com/heimdalljs/-/heimdalljs-0.2.5.tgz#6aa54308eee793b642cff9cf94781445f37730ac"
   dependencies:
     rsvp "~3.2.1"
+
+highlight.js@^9.12.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -4071,6 +4083,10 @@ ng-packagr@^1.3.0:
     typescript "^2.3.2"
     uglify-js "^3.0.7"
     vinyl-fs "^2.4.4"
+
+ng2-device-detector@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ng2-device-detector/-/ng2-device-detector-1.0.0.tgz#8113e65e723ea389b8ade84e6ddcd1418e19deda"
 
 no-case@^2.2.0:
   version "2.3.2"

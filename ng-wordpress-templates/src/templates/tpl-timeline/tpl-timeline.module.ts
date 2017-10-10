@@ -6,9 +6,10 @@ import {TimelineService} from "../../fragments/timeline-item/timeline.service";
 import {ConfigService} from "../../config/config.service";
 
 export const BASE_URL = new InjectionToken<string>('BASE_URL');
+export const STATIC_SHARER_URL = new InjectionToken<string>('STATIC_SHARER_URL');
 
-export function wpConfigFactory(url: string) {
-    return new ConfigService(url);
+export function wpConfigFactory(url: string, staticSharerUrl: string) {
+    return new ConfigService(url, staticSharerUrl);
 }
 
 @NgModule({
@@ -25,17 +26,18 @@ export function wpConfigFactory(url: string) {
 })
 export class TplTimelineModule {
 
-    public static forRoot(baseUrl: string): ModuleWithProviders {
+    public static forRoot(baseUrl: string, staticSharerUrl: string): ModuleWithProviders {
 
         return {
             ngModule: TplTimelineModule,
             providers: [
                 TimelineService,
                 { provide: BASE_URL, useValue: baseUrl },
+                { provide: STATIC_SHARER_URL, useValue: staticSharerUrl },
                 {
                     provide: ConfigService,
                     useFactory: wpConfigFactory,
-                    deps: [BASE_URL]
+                    deps: [BASE_URL, STATIC_SHARER_URL]
                 }
             ]
         };

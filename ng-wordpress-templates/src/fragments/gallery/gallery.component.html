@@ -1,0 +1,26 @@
+<p *ngIf="!imageItems || !imageItems.length">
+    Keine Bilder in dieser Galerie vorhanden.
+</p>
+
+<input id="no-selection" type="radio" name="gallery-radios" [value]="-1" [(ngModel)]="activeItemId" (change)="handleSelectionChange()" />
+<div class="grid" [ngClass]="useLegacyGrid ? 'legacy' : 'modern'" *ngIf="imageItems && imageItems.length" infinite-scroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="300" (scrolled)="loadNextPage()">
+    <div *ngFor="let item of imageItems; let i = index" class="grid-item-wrapper">
+        <label for="image-{{item.id}}">
+            <ngwt-image class="grid-item" [mediaItem]="item" [useAsBackground]="true" [height]="'100%'"></ngwt-image>
+            <div class="caption" *ngIf="item.caption.rendered" [innerHtml]="item.caption.rendered | safeHtml"></div>
+        </label>
+
+        <input class="modal-state" id="image-{{item.id}}" type="radio" name="gallery-radios" [value]="item.id" [(ngModel)]="activeItemId" (change)="handleSelectionChange()" />
+        <div class="modal">
+            <label class="modal__bg" for="no-selection"></label>
+            <div class="modal__inner">
+                <label class="modal__close" for="no-selection"><i class="fa fa-close"></i></label>
+                <label class="modal__next-btn" for="image-{{getNextItemByIndex(i).id}}"><i class="fa fa-arrow-right"></i></label>
+                <label class="modal__prev-btn" for="image-{{getPreviousItemByIndex(i).id}}"><i class="fa fa-arrow-left"></i></label>
+                <ngwt-image [mediaItem]="item" [useFullVersion]="true" [center]="true" (onMediaSwipeLeft)="setActiveItemId(getNextItemByIndex(i).id)" (onMediaSwipeRight)="setActiveItemId(getPreviousItemByIndex(i).id)"></ngwt-image>
+                <button class="fb-share-btn" (click)="shareOnFacebook(item)"><i class="fa fa-share-alt"></i></button>
+                <span class="counter">{{(i + 1) + ' / ' + imageItems.length}}</span>
+            </div>
+        </div>
+    </div>
+</div>
