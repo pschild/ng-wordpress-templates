@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {TplTextModule} from '@ngWordpressTemplates';
+import {TplTextModule, TplTimelineModule} from '@ngWordpressTemplates';
 
 @NgModule({
     declarations: [
@@ -10,7 +10,8 @@ import {TplTextModule} from '@ngWordpressTemplates';
     ],
     imports: [
         BrowserModule,
-        TplTextModule.forRoot()
+        TplTextModule.forRoot(),
+        TplTimelineModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
