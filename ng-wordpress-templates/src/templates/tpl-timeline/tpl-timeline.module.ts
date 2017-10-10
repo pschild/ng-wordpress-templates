@@ -3,8 +3,13 @@ import {CommonModule} from '@angular/common';
 import {TplTimelineComponent} from "./tpl-timeline.component";
 import {TimelineItemModule} from "../../fragments/timeline-item/timeline-item.module";
 import {TimelineService} from "../../fragments/timeline-item/timeline.service";
+import {ConfigService} from "../../config/config.service";
 
 export const BASE_URL = new InjectionToken<string>('BASE_URL');
+
+export function wpConfigFactory(url: string) {
+    return new ConfigService(url);
+}
 
 @NgModule({
     imports: [
@@ -26,7 +31,12 @@ export class TplTimelineModule {
             ngModule: TplTimelineModule,
             providers: [
                 TimelineService,
-                { provide: BASE_URL, useValue: baseUrl }
+                { provide: BASE_URL, useValue: baseUrl },
+                {
+                    provide: ConfigService,
+                    useFactory: wpConfigFactory,
+                    deps: [BASE_URL]
+                }
             ]
         };
     }
