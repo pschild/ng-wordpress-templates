@@ -5,7 +5,8 @@
 /tmp
 /out-tsc
 /.ng_build
-/src/my-lib
+/src/pschild
+/docs
 
 # dependencies
 /node_modules

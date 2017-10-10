@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "src": "my-lib",
-  "dest": "dist/my-lib",
+  "src": "pschild",
+  "dest": "dist/pschild",
   "workingDirectory": ".ng_build",
   "lib": {
     "entryFile": "src/public_api.ts"

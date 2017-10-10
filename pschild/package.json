@@ -1,6 +1,6 @@
 {
-  "name": "@my/lib",
-  "version": "1.0.13",
+  "name": "pschild",
+  "version": "1.0.14",
   "description": "An example for publishing an Angular CLI Module to npm",
   "author": "Philippe Schild",
   "license": "MIT",

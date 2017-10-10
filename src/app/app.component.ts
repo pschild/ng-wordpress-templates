@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {BarService} from '@my/lib';
+import {BarService} from '@pschild';
 import {Observable} from "rxjs/Observable";
 
 @Component({

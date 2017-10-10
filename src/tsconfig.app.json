@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "angularCompilerOptions": {
     "paths": {
-      "@my/lib": [ "./my-lib" ]
+      "@pschild": [ "./pschild" ]
     }
   },
   "compilerOptions": {
@@ -11,7 +11,7 @@
     "module": "es2015",
     "types": [],
     "paths": {
-      "@my/lib": [ "./my-lib" ]
+      "@pschild": [ "./pschild" ]
     }
   },
   "exclude": [
