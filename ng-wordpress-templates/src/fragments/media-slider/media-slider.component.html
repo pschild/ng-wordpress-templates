@@ -1,0 +1,27 @@
+<p *ngIf="!mediaItems || !mediaItems.length">
+    Keine Bilder in dieser Galerie vorhanden.
+</p>
+
+<div class="cssSlider">
+
+    <input *ngFor="let item of mediaItems; let i = index" type="radio" name="slider" id="slide-{{i}}" [value]="i" [(ngModel)]="activeSlideIndex">
+
+    <ul class="sliderElements" [ngStyle]="{'width': calcSliderWidth(), 'left': -(activeSlideIndex * 100) + '%'}">
+        <li *ngFor="let item of mediaItems; let i = index" [ngStyle]="{'width': calcItemWidth()}">
+            <div class="slider-image-container" (swipeleft)="setActiveIndex(i + 1)" (swiperight)="setActiveIndex(i - 1)" [ngSwitch]="item.mime_type">
+                <div *ngSwitchCase="MIME_TYPE.IMAGE_JPEG">
+                    <ngwt-image [mediaItem]="item" [useAsBackground]="true" [height]="'500px'" [useFullVersion]="true"></ngwt-image>
+                    <div class="caption">Beschreibung</div>
+                </div>
+                <ngwt-video [mediaItem]="item" *ngSwitchCase="MIME_TYPE.VIDEO_MP4"></ngwt-video>
+                <div *ngSwitchDefault="">Unknown mime_type "{{item.mime_type}}"</div>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="sliderControls" *ngIf="mediaItems && mediaItems.length > 1">
+        <li *ngFor="let item of mediaItems; let i = index">
+            <label for="slide-{{i}}" [ngClass]="{'active': activeSlideIndex === i}"></label>
+        </li>
+    </ul>
+</div>

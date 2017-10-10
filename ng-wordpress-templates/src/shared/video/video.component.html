@@ -1,0 +1,7 @@
+<ngwt-loading-indicator *ngIf="!mediaHasLoaded || !(dataHasLoaded$ | async)"></ngwt-loading-indicator>
+
+<video *ngIf="dataHasLoaded$ | async" class="video-container" [controls]="showControls" [autoplay]="enableAutoplay"
+       (loadeddata)="onMediaLoaded()" (play)="onPlay()" (pause)="onPause()" (swipeleft)="onSwipeLeft()" (swiperight)="onSwipeRight()">
+    <source [src]="getSourceUrl()" [type]="getMimeType()">
+    Your browser does not support HTML5 video.
+</video>

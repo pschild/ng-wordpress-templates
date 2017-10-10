@@ -1,0 +1,78 @@
+.sliderElements,
+.sliderElements figure,
+.sliderControls {
+  margin: 0;
+  padding: 0;
+}
+
+.cssSlider {
+  overflow-x: hidden;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.sliderElements {
+  list-style: none;
+  position: relative;
+  left: 0;
+  margin-bottom: 15px;
+  transition: left .5s ease-in-out;
+
+  &:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+  }
+
+  & > li {
+    float: left;
+    position: relative;
+    text-align: center;
+  }
+
+  .caption {
+    display: block;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+    background: rgba(0, 0, 0, .5);
+  }
+}
+
+.cssSlider input {
+  position: absolute;
+  left: -99999px;
+}
+
+.sliderControls {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    background: #ccc;
+
+    &:hover, &.active {
+      background: #aaa;
+    }
+
+    &.active {
+      cursor: default;
+    }
+  }
+}

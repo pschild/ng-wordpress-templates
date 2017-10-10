@@ -1,0 +1,17 @@
+<ngwt-loading-indicator *ngIf="(!mediaHasLoaded || !(dataHasLoaded$ | async)) && getSourceUrl()"></ngwt-loading-indicator>
+
+<img *ngIf="(dataHasLoaded$ | async) && getSourceUrl()"
+     [ngClass]="{'image-container': true, 'center': center}"
+     [src]="getSourceUrl()"
+     [ngStyle]="{'display': useAsBackground ? 'none' : 'block'}"
+     (load)="onMediaLoaded()"
+     (swipeleft)="onSwipeLeft()"
+     (swiperight)="onSwipeRight()"
+/>
+
+<div *ngIf="getSourceUrl() && useAsBackground && (dataHasLoaded$ | async) && mediaHasLoaded"
+     [ngClass]="{'background-image-container': true, 'center': center}"
+     [ngStyle]="getBackgroundStyle()"
+     (swipeleft)="onSwipeLeft()"
+     (swiperight)="onSwipeRight()">
+</div>
