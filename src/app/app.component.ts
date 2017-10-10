@@ -1,18 +1,26 @@
 import {Component} from '@angular/core';
-import {BarService} from '@ngWordpressTemplates';
-import {Observable} from "rxjs/Observable";
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
+    template: `
+        <app-tpl-text [data]="data" [params]="params"></app-tpl-text>
+    `,
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
-    value$: Observable<string>;
+    data = {
+        title: {
+            rendered: 'This... is a test!'
+        },
+        acf: {
+            content: 'Hello World'
+        }
+    };
 
-    constructor(private bar: BarService) {
-        this.value$ = bar.value;
+    params = null;
+
+    constructor() {
     }
 
 }
