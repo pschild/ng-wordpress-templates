@@ -1,9 +1,10 @@
 {
   "name": "@my/lib",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.13",
+  "description": "An example for publishing an Angular CLI Module to npm",
   "author": "Philippe Schild",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "peerDependencies": {
     "@angular/core": "^4.2.4",
     "@angular/common": "^4.2.4"
