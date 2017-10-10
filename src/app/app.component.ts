@@ -3,6 +3,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app-root',
     template: `
+        <ngwt-tpl-codeblocks [data]="codeblocksData" [params]="params"></ngwt-tpl-codeblocks>
         <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>
         <ngwt-tpl-posts [data]="postsData" [params]="params"></ngwt-tpl-posts>
         <ngwt-tpl-text [data]="textData" [params]="params"></ngwt-tpl-text>
@@ -32,6 +33,15 @@ export class AppComponent {
     postsData = {
         acf: {
             posts_of_categories: [{term_id: 42},{term_id: 43}]
+        }
+    };
+
+    codeblocksData = {
+        title: {
+            rendered: 'title'
+        },
+        acf: {
+            content: 'content'
         }
     };
 
