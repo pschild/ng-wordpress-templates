@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean:lib": "if exist \"./dist\" rmdir \"./dist\" /s /q",
-    "build:lib": "yarn clean:lib && ng-packagr && (if exist \"./src/pschild\" rmdir \"./src/pschild\" /s /q) && xcopy \"./dist/pschild\" \"./src/pschild\" /e /i",
+    "build:lib": "yarn clean:lib && ng-packagr && (if exist \"./src/ng-wordpress-templates\" rmdir \"./src/ng-wordpress-templates\" /s /q) && xcopy \"./dist/ng-wordpress-templates\" \"./src/ng-wordpress-templates\" /e /i",
     "docs": "compodoc -p tsconfig.json -d docs --disableCoverage --disablePrivateOrInternalSupport",
     "gh-pages": "yarn docs && gh-pages -d docs"
   },

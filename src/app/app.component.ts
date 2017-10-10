@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {BarService} from '@pschild';
+import {BarService} from '@ngWordpressTemplates';
 import {Observable} from "rxjs/Observable";
 
 @Component({

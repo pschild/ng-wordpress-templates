@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "src": "pschild",
-  "dest": "dist/pschild",
+  "src": "ng-wordpress-templates",
+  "dest": "dist/ng-wordpress-templates",
   "workingDirectory": ".ng_build",
   "lib": {
     "entryFile": "src/public_api.ts"

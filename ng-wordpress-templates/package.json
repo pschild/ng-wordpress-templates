@@ -1,0 +1,13 @@
+{
+  "name": "ng-wordpress-templates",
+  "version": "0.0.1",
+  "description": "Templates used by headless Wordpress with Angular",
+  "author": "Philippe Schild",
+  "license": "MIT",
+  "repository": "https://github.com/pschild/ng-wordpress-templates.git",
+  "private": false,
+  "peerDependencies": {
+    "@angular/core": "^4.2.4",
+    "@angular/common": "^4.2.4"
+  }
+}
