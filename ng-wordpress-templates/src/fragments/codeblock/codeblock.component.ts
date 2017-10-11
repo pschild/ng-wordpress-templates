@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import * as hljs from 'highlight.js';
+
+declare var hljs: any;
 
 @Component({
     selector: 'ngwt-codeblock',
@@ -18,6 +19,8 @@ export class CodeblockComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+        require("style-loader!../../../node_modules/highlight.js/styles/vs2015.css");
+        require("script-loader!../../../node_modules/highlight.js/lib/highlight.js");
     }
 
     ngAfterViewInit(): void {
