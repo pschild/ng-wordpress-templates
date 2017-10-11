@@ -3,6 +3,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app-root',
     template: `
+        <ngwt-tpl-gallery [data]="galleryData" [params]="params"></ngwt-tpl-gallery>
         <ngwt-tpl-codeblocks [data]="codeblocksData" [params]="params"></ngwt-tpl-codeblocks>
         <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>
         <ngwt-tpl-posts [data]="postsData" [params]="params"></ngwt-tpl-posts>
@@ -41,7 +42,13 @@ export class AppComponent {
             rendered: 'title'
         },
         acf: {
-            content: 'content'
+            content: '<div class="code-highlight">content</div>'
+        }
+    };
+
+    galleryData = {
+        acf: {
+            gallery_images: [493, 542]
         }
     };
 

@@ -3,5 +3,6 @@ export * from './templates/tpl-timeline/tpl-timeline.module';
 export * from './templates/tpl-projects/tpl-projects.module';
 export * from './templates/tpl-posts/tpl-posts.module';
 export * from './templates/tpl-codeblocks/tpl-codeblocks.module';
+export * from './templates/tpl-gallery/tpl-gallery.module';
 
 export * from './services/post.service';
