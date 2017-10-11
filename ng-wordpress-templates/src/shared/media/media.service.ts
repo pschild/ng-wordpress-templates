@@ -9,6 +9,9 @@ export class MediaService {
 
     static MIME_TYPE = {
         IMAGE_JPEG: 'image/jpeg',
+        IMAGE_PNG: 'image/png',
+        IMAGE_GIF: 'image/gif',
+        IMAGE_BMP: 'image/bmp',
         VIDEO_MP4: 'video/mp4'
     };
 

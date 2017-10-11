@@ -14,8 +14,6 @@ export class MediaSliderComponent implements OnInit {
 
     activeSlideIndex: number = 0;
 
-    MIME_TYPE = MediaService.MIME_TYPE;
-
     constructor() {
     }
 
@@ -50,6 +48,18 @@ export class MediaSliderComponent implements OnInit {
                 this.setActiveIndex(this.activeSlideIndex + 1);
                 break;
         }
+    }
+
+    isImage(mediaItem) {
+        return mediaItem.mime_type ===
+            MediaService.MIME_TYPE.IMAGE_JPEG
+            || MediaService.MIME_TYPE.IMAGE_PNG
+            || MediaService.MIME_TYPE.IMAGE_GIF
+            || MediaService.MIME_TYPE.IMAGE_BMP;
+    }
+
+    isVideo(mediaItem) {
+        return mediaItem.mime_type === MediaService.MIME_TYPE.VIDEO_MP4;
     }
 
 }
