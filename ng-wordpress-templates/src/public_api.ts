@@ -4,5 +4,6 @@ export * from './templates/tpl-projects/tpl-projects.module';
 export * from './templates/tpl-posts/tpl-posts.module';
 export * from './templates/tpl-codeblocks/tpl-codeblocks.module';
 export * from './templates/tpl-gallery/tpl-gallery.module';
+export * from './templates/tpl-text-gallery/tpl-text-gallery.module';
 
 export * from './services/post.service';
