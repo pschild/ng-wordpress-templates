@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewEncapsulation} from '@angular/core';
 
 declare var hljs: any;
+declare var require: any;
 
 @Component({
     selector: 'ngwt-codeblock',
