@@ -1,11 +1,18 @@
-# ```ng-wordpress-templates```
-
 This library contains different templates that can be used by a headless Wordpress application with Angular.
 
 ## How to use
+
+The templates provided with this library are supposed to work with the corresponding theme/templates on the server side.
+Therefore, download [pschild-angular-wordpress-theme](https://github.com/pschild/pschild-angular-wordpress-theme) and use it in your Wordpress installation.
+
 ```typescript
 ...
-import {NGWT_CONFIG, NgwtConfig, TplTextModule, ...} from '@ngWordpressTemplates';
+import {
+    NGWT_CONFIG,
+    NgwtConfig,
+    TplTextModule,
+    TplGalleryModule
+} from '@ngWordpressTemplates';
 
 const libConfig: NgwtConfig = {
     baseUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
@@ -17,13 +24,7 @@ const libConfig: NgwtConfig = {
     imports: [
         ...
         TplTextModule.forRoot(),
-        TplTimelineModule.forRoot(),
-        TplProjectsModule.forRoot(),
-        TplPostsModule.forRoot(),
-        TplCodeblocksModule.forRoot(),
-        TplGalleryModule.forRoot(),
-        TplTextGalleryModule.forRoot(),
-        TplTextMediaSliderModule.forRoot()
+        TplGalleryModule.forRoot()
     ],
     providers: [
         ...
@@ -37,11 +38,11 @@ const libConfig: NgwtConfig = {
 ```
 
 ## Templates
-* Text
-* Timeline
-* Projects
-* Posts
-* Codeblocks
-* Gallery
-* TextGallery
-* TextMediaSlider
+* Text: ```TplTextModule```
+* Timeline: ```TplTimelineModule```
+* Projects: ```TplProjectsModule```
+* Posts: ```TplPostsModule```
+* Codeblocks: ```TplCodeblocksModule```
+* Gallery: ```TplGalleryModule```
+* TextGallery: ```TplTextGalleryModule```
+* TextMediaSlider: ```TplTextMediaSliderModule```
