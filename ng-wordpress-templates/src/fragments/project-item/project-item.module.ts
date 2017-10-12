@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ProjectService} from "./project.service";
 import {ProjectItemComponent} from "./project-item.component";
 import {PipesModule} from "../../pipes/pipes.module";
 import {MediaSliderModule} from "../media-slider/media-slider.module";
@@ -16,9 +15,6 @@ import {MediaSliderModule} from "../media-slider/media-slider.module";
     ],
     exports: [
         ProjectItemComponent
-    ],
-    providers: [
-        ProjectService
     ]
 })
 export class ProjectItemModule {

@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TplGalleryComponent} from "./tpl-gallery.component";
 import {SharedModule} from "../../shared/shared.module";
@@ -18,4 +18,12 @@ import {GalleryModule} from "../../fragments/gallery/gallery.module";
     ]
 })
 export class TplGalleryModule {
+
+    public static forRoot(): ModuleWithProviders {
+
+        return {
+            ngModule: TplGalleryModule,
+            providers: []
+        };
+    }
 }

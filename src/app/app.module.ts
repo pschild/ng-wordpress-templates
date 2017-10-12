@@ -24,12 +24,12 @@ const libConfig: NgwtConfig = {
         RouterModule.forRoot(routes),
         TplTextModule.forRoot(),
         TplTimelineModule.forRoot(),
-        TplProjectsModule,
+        TplProjectsModule.forRoot(),
         TplPostsModule.forRoot(),
-        TplCodeblocksModule,
-        TplGalleryModule,
-        TplTextGalleryModule,
-        TplTextMediaSliderModule
+        TplCodeblocksModule.forRoot(),
+        TplGalleryModule.forRoot(),
+        TplTextGalleryModule.forRoot(),
+        TplTextMediaSliderModule.forRoot()
     ],
     providers: [
         {

@@ -23,9 +23,7 @@ export class TplTextModule {
 
         return {
             ngModule: TplTextModule,
-            providers: [
-                // SomeService
-            ]
+            providers: []
         };
     }
 }
