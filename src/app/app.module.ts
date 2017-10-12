@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {TplTextModule, TplTimelineModule, TplProjectsModule, TplPostsModule, TplCodeblocksModule, TplGalleryModule, TplTextGalleryModule, TplTextMediaSliderModule} from '@ngWordpressTemplates';
+import {ConfigService, TplTextModule, TplTimelineModule, TplProjectsModule, TplPostsModule, TplCodeblocksModule, TplGalleryModule, TplTextGalleryModule, TplTextMediaSliderModule} from '@ngWordpressTemplates';
 import {RouterModule, Routes} from "@angular/router";
 import {APP_BASE_HREF} from "@angular/common";
 
@@ -18,7 +18,7 @@ const routes: Routes = [
         BrowserModule,
         RouterModule.forRoot(routes),
         TplTextModule.forRoot(),
-        TplTimelineModule.forRoot('http://wp.pschild.de/wp-json', 'na'),
+        TplTimelineModule.forRoot(),
         TplProjectsModule,
         TplPostsModule.forRoot(),
         TplCodeblocksModule,
@@ -26,7 +26,19 @@ const routes: Routes = [
         TplTextGalleryModule,
         TplTextMediaSliderModule
     ],
-    providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+    providers: [
+        {
+            provide: APP_BASE_HREF,
+            useValue: '/'
+        },
+        {
+            provide: ConfigService,
+            useValue: {
+                baseUrl: 'http://wp.pschild.de/wp-json',
+                staticSharerUrl: 'http://wp.pschild.de/wp-content/themes/pschild-angular/sharer/sharer.php'
+            }
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

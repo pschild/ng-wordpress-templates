@@ -26,19 +26,12 @@ export function wpConfigFactory(url: string, staticSharerUrl: string) {
 })
 export class TplTimelineModule {
 
-    public static forRoot(baseUrl: string, staticSharerUrl: string): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders {
 
         return {
             ngModule: TplTimelineModule,
             providers: [
-                TimelineService,
-                { provide: BASE_URL, useValue: baseUrl },
-                { provide: STATIC_SHARER_URL, useValue: staticSharerUrl },
-                {
-                    provide: ConfigService,
-                    useFactory: wpConfigFactory,
-                    deps: [BASE_URL, STATIC_SHARER_URL]
-                }
+                TimelineService
             ]
         };
     }
