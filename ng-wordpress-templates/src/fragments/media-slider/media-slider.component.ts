@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {KeyCode} from "../../enums/key-code.enum";
-import {MediaService} from "../../shared/media/media.service";
+import {MediaService} from "../../services/media.service";
 
 @Component({
     selector: 'ngwt-media-slider',

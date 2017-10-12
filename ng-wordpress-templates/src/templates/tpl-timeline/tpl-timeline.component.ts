@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {TimelineService} from "../../fragments/timeline-item/timeline.service";
+import {TimelineService} from "../../services/timeline.service";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
 
 @Component({

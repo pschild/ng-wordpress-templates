@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {Http} from "@angular/http";
 import {Observable} from "rxjs/Observable";
-import {NGWT_CONFIG, NgwtConfig} from "../../config/NgwtConfig";
+import {NGWT_CONFIG, NgwtConfig} from "../config/NgwtConfig";
 import "rxjs/add/operator/map";
 
 @Injectable()

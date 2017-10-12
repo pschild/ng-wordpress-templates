@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MediaService} from "../../shared/media/media.service";
+import {MediaService} from "../../services/media.service";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
 import {Observable} from "rxjs/Observable";
 

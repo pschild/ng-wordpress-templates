@@ -1,5 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MediaService} from "./media.service";
+import {MediaService} from "../../services/media.service";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 @Component({

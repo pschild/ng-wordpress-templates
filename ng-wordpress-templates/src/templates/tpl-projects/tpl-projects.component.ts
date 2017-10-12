@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProjectService} from "../../fragments/project-item/project.service";
+import {ProjectService} from "../../services/project.service";
 import {Observable} from "rxjs/Observable";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
 
