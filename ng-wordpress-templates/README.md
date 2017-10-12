@@ -5,7 +5,12 @@ This library contains different templates that can be used by a headless Wordpre
 ## How to use
 ```typescript
 ...
-import {ConfigService, TplTextModule, ...} from '@ngWordpressTemplates';
+import {NGWT_CONFIG, NgwtConfig, TplTextModule, ...} from '@ngWordpressTemplates';
+
+const libConfig: NgwtConfig = {
+    baseUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
+    staticSharerUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-content/themes/pschild-angular/sharer/sharer.php'
+};
 
 @NgModule({
     ...
@@ -13,21 +18,18 @@ import {ConfigService, TplTextModule, ...} from '@ngWordpressTemplates';
         ...
         TplTextModule.forRoot(),
         TplTimelineModule.forRoot(),
-        TplProjectsModule,
+        TplProjectsModule.forRoot(),
         TplPostsModule.forRoot(),
-        TplCodeblocksModule,
-        TplGalleryModule,
-        TplTextGalleryModule,
-        TplTextMediaSliderModule
+        TplCodeblocksModule.forRoot(),
+        TplGalleryModule.forRoot(),
+        TplTextGalleryModule.forRoot(),
+        TplTextMediaSliderModule.forRoot()
     ],
     providers: [
         ...
         {
-            provide: ConfigService,
-            useValue: {
-                baseUrl: 'http://wp.pschild.de/wp-json',
-                staticSharerUrl: 'http://wp.pschild.de/wp-content/themes/pschild-angular/sharer/sharer.php'
-            }
+            provide: NGWT_CONFIG,
+            useValue: libConfig
         }
     ],
     ...
@@ -35,4 +37,11 @@ import {ConfigService, TplTextModule, ...} from '@ngWordpressTemplates';
 ```
 
 ## Templates
-* tbd
+* Text
+* Timeline
+* Projects
+* Posts
+* Codeblocks
+* Gallery
+* TextGallery
+* TextMediaSlider
