@@ -15,7 +15,7 @@ import {
 } from '@ngWordpressTemplates';
 
 const libConfig: NgwtConfig = {
-    baseUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
+    apiUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
     staticSharerUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-content/themes/pschild-angular/sharer/sharer.php'
 };
 

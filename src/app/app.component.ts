@@ -18,7 +18,7 @@ export class AppComponent {
 
     textData = {
         title: {
-            rendered: '<h1>My Text</h1>'
+            rendered: 'My Text'
         },
         acf: {
             content: 'Hello World!'
@@ -56,7 +56,7 @@ export class AppComponent {
 
     textGalleryData = {
         title: {
-            rendered: '<h1>My Gallery Title</h1>'
+            rendered: 'My Gallery Title'
         },
         acf: {
             content: 'Hello World',
@@ -66,7 +66,7 @@ export class AppComponent {
 
     textMediaSliderData = {
         title: {
-            rendered: '<h1>My Media Slider Title</h1>'
+            rendered: 'My Media Slider Title'
         },
         acf: {
             content: 'Hello World',
