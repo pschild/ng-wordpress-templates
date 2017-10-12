@@ -11,7 +11,7 @@ export class ProjectService {
     }
 
     loadByIds(ids: Array<number>): Observable<any> {
-        return this.http.get(`${this.config.baseUrl}/wp/v2/project/?include=${ids.join(',')}`)
+        return this.http.get(`${this.config.apiUrl}/wp/v2/project/?include=${ids.join(',')}`)
             .map(res => res.json());
     }
 

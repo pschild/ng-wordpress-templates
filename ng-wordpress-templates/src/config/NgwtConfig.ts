@@ -2,7 +2,7 @@ import {InjectionToken} from "@angular/core";
 import {NgwtConfig} from "./NgwtConfig";
 
 export interface NgwtConfig {
-    baseUrl: string;
+    apiUrl: string;
     staticSharerUrl: string;
 }
 

@@ -21,7 +21,7 @@ export class MediaService {
     }
 
     loadByIds(ids: Array<number>, page: number = 1): Observable<any> {
-        return this.http.get(`${this.config.baseUrl}/wp/v2/media/?page=${page}&per_page=${this.itemsPerPage}&include=${ids.join(',')}&orderby=include&order=asc`)
+        return this.http.get(`${this.config.apiUrl}/wp/v2/media/?page=${page}&per_page=${this.itemsPerPage}&include=${ids.join(',')}&orderby=include&order=asc`)
             .map(res => res.json());
     }
 

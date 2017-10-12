@@ -10,12 +10,12 @@ export class PostService {
     }
 
     loadById(postId: number): Observable<any> {
-        return this.http.get(`${this.config.baseUrl}/wp/v2/posts/${postId}`)
+        return this.http.get(`${this.config.apiUrl}/wp/v2/posts/${postId}`)
             .map(res => res.json());
     }
 
     loadByCategoryIds(categoryIds: Array<number>): Observable<any> {
-        return this.http.get(`${this.config.baseUrl}/wp/v2/posts/?categories=${categoryIds.join(',')}`)
+        return this.http.get(`${this.config.apiUrl}/wp/v2/posts/?categories=${categoryIds.join(',')}`)
             .map(res => res.json());
     }
 }

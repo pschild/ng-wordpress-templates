@@ -11,7 +11,7 @@ export class TimelineService {
     }
 
     loadAll(): Observable<any> {
-        return this.http.get(`${this.config.baseUrl}/wp/v2/timeline`)
+        return this.http.get(`${this.config.apiUrl}/wp/v2/timeline`)
             .map(res => res.json());
     }
 
