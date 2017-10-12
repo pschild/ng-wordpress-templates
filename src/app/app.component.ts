@@ -18,10 +18,10 @@ export class AppComponent {
 
     textData = {
         title: {
-            rendered: 'This... is a test!'
+            rendered: '<h1>My Text</h1>'
         },
         acf: {
-            content: 'Hello World'
+            content: 'Hello World!'
         }
     };
 
@@ -41,10 +41,10 @@ export class AppComponent {
 
     codeblocksData = {
         title: {
-            rendered: 'title'
+            rendered: 'My Code'
         },
         acf: {
-            content: '<div class="code-highlight">content</div>'
+            content: '<div class="code-highlight">some source code</div>'
         }
     };
 
@@ -56,7 +56,7 @@ export class AppComponent {
 
     textGalleryData = {
         title: {
-            rendered: 'This... is a test!'
+            rendered: '<h1>My Gallery Title</h1>'
         },
         acf: {
             content: 'Hello World',
@@ -66,7 +66,7 @@ export class AppComponent {
 
     textMediaSliderData = {
         title: {
-            rendered: 'This... is a test!'
+            rendered: '<h1>My Media Slider Title</h1>'
         },
         acf: {
             content: 'Hello World',
