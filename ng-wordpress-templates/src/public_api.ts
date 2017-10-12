@@ -9,4 +9,4 @@ export * from './templates/tpl-text-media-slider/tpl-text-media-slider.module';
 
 export * from './services/post.service';
 
-export * from './config/config.service';
+export * from './config/NgwtConfig';

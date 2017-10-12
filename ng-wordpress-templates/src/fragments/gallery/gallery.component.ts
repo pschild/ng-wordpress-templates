@@ -1,9 +1,9 @@
-import {Component, EventEmitter, Input, OnInit, Output, Renderer2} from '@angular/core';
+import {Component, EventEmitter, Inject, Input, OnInit, Output, Renderer2} from '@angular/core';
 import {Location} from '@angular/common';
 import {Ng2DeviceService} from "ng2-device-detector";
 import {KeyCode} from "../../enums/key-code.enum";
 import {ShareParams} from "../../interfaces/share-params";
-import {ConfigService} from "../../config/config.service";
+import {NGWT_CONFIG, NgwtConfig} from "../../config/NgwtConfig";
 
 @Component({
     selector: 'ngwt-gallery',
@@ -19,7 +19,7 @@ export class GalleryComponent implements OnInit {
 
     useLegacyGrid: boolean = false;
 
-    constructor(private renderer: Renderer2, private location: Location, private deviceService: Ng2DeviceService, private config: ConfigService) {
+    constructor(private renderer: Renderer2, private location: Location, private deviceService: Ng2DeviceService, @Inject(NGWT_CONFIG) private config: NgwtConfig) {
     }
 
     ngOnInit() {
