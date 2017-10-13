@@ -69,3 +69,6 @@ const libConfig: NgwtConfig = {
 * Gallery: ```TplGalleryModule```
 * TextGallery: ```TplTextGalleryModule```
 * TextMediaSlider: ```TplTextMediaSliderModule```
+
+## Fragments
+* MediaSlider: ```MediaSliderModule```
