@@ -29,7 +29,8 @@ import {
 })
 ```
 
-Additionally the library expects a configuration (containing URLs etc.) to be provided within the app. To do that, you only have to provide ```NGWT_CONFIG``` as configuration with an object of type ```NgwtConfig``` as the value.
+Additionally the library expects a configuration (containing URLs etc.) to be provided within the app. To do that, you only have to provide ```NGWT_CONFIG``` as configuration by using a factory method returning an object of type ```NgwtConfig```.
+You can either use static values or values read from your environment when you want to provide different values for different build types.
 
 ```typescript
 ...
@@ -39,10 +40,12 @@ import {
     ...
 } from '@ngWordpressTemplates';
 
-const libConfig: NgwtConfig = {
-    apiUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
-    staticSharerUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-content/themes/pschild-angular/sharer/sharer.php'
-};
+export function ngwtConfigFactory(): NgwtConfig {
+    return {
+        apiUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
+        staticSharerUrl: environment.sharerUrl
+    };
+}
 
 @NgModule({
     ...
@@ -53,7 +56,7 @@ const libConfig: NgwtConfig = {
         ...
         {
             provide: NGWT_CONFIG,
-            useValue: libConfig
+            useFactory: ngwtConfigFactory
         }
     ],
     ...
