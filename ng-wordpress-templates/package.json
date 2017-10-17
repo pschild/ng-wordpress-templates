@@ -1,6 +1,6 @@
 {
   "name": "ng-wordpress-templates",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Templates used by headless Wordpress with Angular",
   "author": "Philippe Schild",
   "license": "MIT",
