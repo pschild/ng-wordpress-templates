@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProjectService} from "../../services/project.service";
+import {ProjectService} from "ng-wordpress-services";
 import {Observable} from "rxjs/Observable";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
 

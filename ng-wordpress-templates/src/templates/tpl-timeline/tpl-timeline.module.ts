@@ -2,7 +2,7 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TplTimelineComponent} from "./tpl-timeline.component";
 import {TimelineItemModule} from "../../fragments/timeline-item/timeline-item.module";
-import {TimelineService} from "../../services/timeline.service";
+import {TimelineService} from "ng-wordpress-services";
 
 @NgModule({
     imports: [

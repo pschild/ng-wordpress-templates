@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {TimelineService} from "../../services/timeline.service";
+import {TimelineService} from "ng-wordpress-services";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
 
 @Component({

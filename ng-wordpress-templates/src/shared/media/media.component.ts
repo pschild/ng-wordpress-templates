@@ -1,5 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MediaService} from "../../services/media.service";
+import {MediaService} from "ng-wordpress-services";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 @Component({
