@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MediaService} from "ng-wordpress-services";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
+import {MediaService} from "../../services/media.service";
 
 @Component({
     selector: 'ngwt-tpl-gallery',

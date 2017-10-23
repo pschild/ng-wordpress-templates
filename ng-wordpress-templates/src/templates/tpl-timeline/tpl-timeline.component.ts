@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {TimelineService} from "ng-wordpress-services";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
+import {TimelineService} from "../../services/timeline.service";
+import {NGWT_CONFIG} from "../../config/NgwtConfig";
 
 @Component({
     selector: 'ngwt-tpl-timeline',
@@ -16,8 +17,9 @@ export class TplTimelineComponent extends BaseTemplateComponent implements OnIni
 
     timelineItems$: Observable<any>;
 
-    constructor(private timelineService: TimelineService) {
+    constructor(private timelineService: TimelineService, @Inject(NGWT_CONFIG) private config: any) {
         super();
+        console.log(this.config);
     }
 
     ngOnInit() {

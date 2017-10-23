@@ -1,6 +1,6 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MediaService} from "ng-wordpress-services";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {MediaService} from "../../services/media.service";
 
 @Component({
     template: `MediaComponent does not have a template. Use specific derived components instead.`,

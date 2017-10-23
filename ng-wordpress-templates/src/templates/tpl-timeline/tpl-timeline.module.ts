@@ -2,12 +2,13 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TplTimelineComponent} from "./tpl-timeline.component";
 import {TimelineItemModule} from "../../fragments/timeline-item/timeline-item.module";
-import {TimelineService} from "ng-wordpress-services";
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
     imports: [
         CommonModule,
-        TimelineItemModule
+        TimelineItemModule,
+        SharedModule
     ],
     declarations: [
         TplTimelineComponent
@@ -18,13 +19,11 @@ import {TimelineService} from "ng-wordpress-services";
 })
 export class TplTimelineModule {
 
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(config: any): ModuleWithProviders {
 
         return {
             ngModule: TplTimelineModule,
-            providers: [
-                TimelineService
-            ]
+            providers: []
         };
     }
 }

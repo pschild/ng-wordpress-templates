@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {MediaService} from "ng-wordpress-services";
+import {MediaService} from "../../services/media.service";
 
 @Component({
     selector: 'ngwt-project-item',

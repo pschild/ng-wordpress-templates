@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ProjectService} from "ng-wordpress-services";
 import {Observable} from "rxjs/Observable";
 import {BaseTemplateComponent} from "../../shared/base-template/base-template.component";
+import {ProjectService} from "../../services/project.service";
 
 @Component({
     selector: 'ngwt-tpl-projects',
