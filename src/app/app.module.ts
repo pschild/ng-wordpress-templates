@@ -14,7 +14,8 @@ import {
     TplProjectsModule,
     TplCodeblocksModule,
     TplGalleryModule,
-    TplTextGalleryModule
+    TplTextGalleryModule,
+    TplTextMediaSliderModule
 } from '@ngWordpressTemplates';
 
 const routes: Routes = [
@@ -39,8 +40,8 @@ const routes: Routes = [
         TplPostsModule.forRoot(),
         TplCodeblocksModule.forRoot(),
         TplGalleryModule.forRoot(),
-        TplTextGalleryModule.forRoot()
-        // TplTextMediaSliderModule.forRoot()
+        TplTextGalleryModule.forRoot(),
+        TplTextMediaSliderModule.forRoot()
     ],
     providers: [
         {
