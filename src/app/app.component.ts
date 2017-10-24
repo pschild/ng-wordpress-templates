@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
         <ngwt-tpl-gallery [data]="galleryData" [params]="params"></ngwt-tpl-gallery>
         <ngwt-tpl-codeblocks [data]="codeblocksData" [params]="params"></ngwt-tpl-codeblocks>
         <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>-->
-        <!--<ngwt-tpl-posts [data]="postsData" [params]="params"></ngwt-tpl-posts>-->
+        <ngwt-tpl-posts [data]="postsData" [params]="params"></ngwt-tpl-posts>
         <ngwt-tpl-text [data]="textData" [params]="params"></ngwt-tpl-text>
         <ngwt-tpl-timeline [data]="timelineData" [params]="params"></ngwt-tpl-timeline>
     `,

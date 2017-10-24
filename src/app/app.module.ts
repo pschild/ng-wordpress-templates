@@ -6,7 +6,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {APP_BASE_HREF} from "@angular/common";
 import {environment} from "../environments/environment";
 
-import {NgWordpressServicesModule, TplTimelineModule, TplTextModule} from '@ngWordpressTemplates';
+import {NgWordpressServicesModule, TplTimelineModule, TplTextModule, TplPostsModule} from '@ngWordpressTemplates';
 
 const routes: Routes = [
     { path: '', component: AppComponent }
@@ -25,9 +25,9 @@ const routes: Routes = [
             apiUrl: environment.apiUrl,
             staticSharerUrl: environment.staticSharerUrl,
             menuName: 'main'
-        })
+        }),
         // TplProjectsModule.forRoot(),
-        // TplPostsModule.forRoot(),
+        TplPostsModule.forRoot()
         // TplCodeblocksModule.forRoot(),
         // TplGalleryModule.forRoot(),
         // TplTextGalleryModule.forRoot(),

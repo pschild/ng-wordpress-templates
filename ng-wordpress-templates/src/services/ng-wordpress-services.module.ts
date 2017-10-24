@@ -3,6 +3,7 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {HttpModule} from "@angular/http";
 import {TimelineService} from "./timeline.service";
 import {NGWT_CONFIG, NgwtConfig} from "../config/NgwtConfig";
+import {PostService} from "./post.service";
 
 @NgModule({
     imports: [
@@ -22,7 +23,7 @@ export class NgWordpressServicesModule {
                     useValue: config
                 },
                 // PageService,
-                // PostService,
+                PostService,
                 // ProjectService,
                 TimelineService
                 // MediaService,
