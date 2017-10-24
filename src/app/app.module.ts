@@ -7,18 +7,10 @@ import {APP_BASE_HREF} from "@angular/common";
 import {environment} from "../environments/environment";
 
 import {NgWordpressServicesModule, TplTimelineModule} from '@ngWordpressTemplates';
-import Config from "./config";
 
 const routes: Routes = [
     { path: '', component: AppComponent }
 ];
-
-export function ngwtConfigFactory(): any {
-    return {
-        apiUrl: environment.apiUrl,
-        staticSharerUrl: environment.staticSharerUrl
-    };
-}
 
 @NgModule({
     declarations: [
@@ -29,7 +21,11 @@ export function ngwtConfigFactory(): any {
         RouterModule.forRoot(routes),
         // TplTextModule.forRoot(),
         TplTimelineModule.forRoot({}),
-        NgWordpressServicesModule.forRoot({apiUrl: 'tbd'})
+        NgWordpressServicesModule.forRoot({
+            apiUrl: environment.apiUrl,
+            staticSharerUrl: environment.staticSharerUrl,
+            menuName: 'main'
+        })
         // TplProjectsModule.forRoot(),
         // TplPostsModule.forRoot(),
         // TplCodeblocksModule.forRoot(),

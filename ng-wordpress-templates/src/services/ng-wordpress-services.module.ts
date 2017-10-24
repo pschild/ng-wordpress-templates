@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {HttpModule} from "@angular/http";
 import {TimelineService} from "./timeline.service";
-import {NGWT_CONFIG} from "../config/NgwtConfig";
+import {NGWT_CONFIG, NgwtConfig} from "../config/NgwtConfig";
 
 @NgModule({
     imports: [
@@ -12,7 +12,7 @@ import {NGWT_CONFIG} from "../config/NgwtConfig";
 })
 export class NgWordpressServicesModule {
 
-    public static forRoot(config: any): ModuleWithProviders {
+    public static forRoot(config: NgwtConfig): ModuleWithProviders {
 
         return {
             ngModule: NgWordpressServicesModule,
