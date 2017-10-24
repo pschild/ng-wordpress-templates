@@ -19,7 +19,6 @@ export class TplTimelineComponent extends BaseTemplateComponent implements OnIni
 
     constructor(private timelineService: TimelineService, @Inject(NGWT_CONFIG) private config: any) {
         super();
-        console.log(this.config);
     }
 
     ngOnInit() {
