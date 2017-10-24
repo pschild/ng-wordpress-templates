@@ -6,10 +6,19 @@ import {RouterModule, Routes} from "@angular/router";
 import {APP_BASE_HREF} from "@angular/common";
 import {environment} from "../environments/environment";
 
-import {NgWordpressServicesModule, TplTimelineModule, TplTextModule, TplPostsModule, TplProjectsModule, TplCodeblocksModule, TplGalleryModule} from '@ngWordpressTemplates';
+import {
+    NgWordpressServicesModule,
+    TplTimelineModule,
+    TplTextModule,
+    TplPostsModule,
+    TplProjectsModule,
+    TplCodeblocksModule,
+    TplGalleryModule,
+    TplTextGalleryModule
+} from '@ngWordpressTemplates';
 
 const routes: Routes = [
-    { path: '', component: AppComponent }
+    {path: '', component: AppComponent}
 ];
 
 @NgModule({
@@ -29,8 +38,8 @@ const routes: Routes = [
         TplProjectsModule.forRoot(),
         TplPostsModule.forRoot(),
         TplCodeblocksModule.forRoot(),
-        TplGalleryModule.forRoot()
-        // TplTextGalleryModule.forRoot(),
+        TplGalleryModule.forRoot(),
+        TplTextGalleryModule.forRoot()
         // TplTextMediaSliderModule.forRoot()
     ],
     providers: [

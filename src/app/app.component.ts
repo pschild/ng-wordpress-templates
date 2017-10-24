@@ -3,8 +3,8 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app-root',
     template: `
-        <!--<ngwt-tpl-text-media-slider [data]="textMediaSliderData" [params]="params"></ngwt-tpl-text-media-slider>
-        <ngwt-tpl-text-gallery [data]="textGalleryData" [params]="params"></ngwt-tpl-text-gallery>-->
+        <!--<ngwt-tpl-text-media-slider [data]="textMediaSliderData" [params]="params"></ngwt-tpl-text-media-slider>-->
+        <ngwt-tpl-text-gallery [data]="textGalleryData" [params]="params"></ngwt-tpl-text-gallery>
         <ngwt-tpl-gallery [data]="galleryData" [params]="params"></ngwt-tpl-gallery>
         <ngwt-tpl-codeblocks [data]="codeblocksData" [params]="params"></ngwt-tpl-codeblocks>
         <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>
