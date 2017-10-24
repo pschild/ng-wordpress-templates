@@ -10,54 +10,34 @@ First, install the library using
 npm i ng-wordpress-templates --save
 ```
 
-After that you can import the template modules you want to use into your AppModule.
-```typescript
-...
-import {
-    TplTextModule,
-    TplGalleryModule
-} from '@ngWordpressTemplates';
+After that you can import the main module (```NgWordpressServicesModule```) and any of the template modules you want to use into your AppModule.
 
-@NgModule({
-    ...
-    imports: [
-        ...
-        TplTextModule.forRoot(),
-        TplGalleryModule.forRoot()
-    ],
-    ...
-})
-```
-
-Additionally the library expects a configuration (containing URLs etc.) to be provided within the app. To do that, you only have to provide ```NGWT_CONFIG``` as configuration by using a factory method returning an object of type ```NgwtConfig```.
+The ```NgWordpressServicesModule``` expects a configuration (containing URLs etc.) to be passed via ```forRoot()``` method.
 You can either use static values or values read from your environment when you want to provide different values for different build types.
 
+Important: the template modules use the configuration passed via ```NgWordpressServicesModule.forRoot()``` and also rely on services provided by this module, so don't forget to call the method.
+
 ```typescript
 ...
 import {
-    NGWT_CONFIG,
-    NgwtConfig,
+    NgWordpressServicesModule,
+    TplTextModule,
+    TplGalleryModule,
     ...
 } from '@ngWordpressTemplates';
-
-export function ngwtConfigFactory(): NgwtConfig {
-    return {
-        apiUrl: 'http://YOUR-WORDPRESS-INSTALLATION/wp-json',
-        staticSharerUrl: environment.sharerUrl
-    };
-}
 
 @NgModule({
     ...
     imports: [
         ...
-    ],
-    providers: [
+        NgWordpressServicesModule.forRoot({
+            apiUrl: environment.apiUrl,
+            staticSharerUrl: environment.staticSharerUrl,
+            menuName: 'main'
+        }),
+        TplTextModule,
+        TplGalleryModule,
         ...
-        {
-            provide: NGWT_CONFIG,
-            useFactory: ngwtConfigFactory
-        }
     ],
     ...
 })
@@ -72,3 +52,11 @@ export function ngwtConfigFactory(): NgwtConfig {
 * Gallery: ```TplGalleryModule```
 * TextGallery: ```TplTextGalleryModule```
 * TextMediaSlider: ```TplTextMediaSliderModule```
+
+## Services
+* ```PageService```
+* ```PostService```
+* ```MediaService```
+* ```ProjectsService```
+* ```TimelineService```
+* ```NavigationService```
