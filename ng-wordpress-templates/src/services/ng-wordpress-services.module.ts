@@ -4,6 +4,8 @@ import {HttpModule} from "@angular/http";
 import {TimelineService} from "./timeline.service";
 import {NGWT_CONFIG, NgwtConfig} from "../config/NgwtConfig";
 import {PostService} from "./post.service";
+import {ProjectService} from "./project.service";
+import {MediaService} from "./media.service";
 
 @NgModule({
     imports: [
@@ -24,9 +26,9 @@ export class NgWordpressServicesModule {
                 },
                 // PageService,
                 PostService,
-                // ProjectService,
-                TimelineService
-                // MediaService,
+                ProjectService,
+                TimelineService,
+                MediaService
                 // NavigationService
             ]
         };

@@ -6,8 +6,8 @@ import {Component} from '@angular/core';
         <!--<ngwt-tpl-text-media-slider [data]="textMediaSliderData" [params]="params"></ngwt-tpl-text-media-slider>
         <ngwt-tpl-text-gallery [data]="textGalleryData" [params]="params"></ngwt-tpl-text-gallery>
         <ngwt-tpl-gallery [data]="galleryData" [params]="params"></ngwt-tpl-gallery>
-        <ngwt-tpl-codeblocks [data]="codeblocksData" [params]="params"></ngwt-tpl-codeblocks>
-        <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>-->
+        <ngwt-tpl-codeblocks [data]="codeblocksData" [params]="params"></ngwt-tpl-codeblocks>-->
+        <ngwt-tpl-projects [data]="projectsData" [params]="params"></ngwt-tpl-projects>
         <ngwt-tpl-posts [data]="postsData" [params]="params"></ngwt-tpl-posts>
         <ngwt-tpl-text [data]="textData" [params]="params"></ngwt-tpl-text>
         <ngwt-tpl-timeline [data]="timelineData" [params]="params"></ngwt-tpl-timeline>
