@@ -19,7 +19,7 @@ import {SharedModule} from "../../shared/shared.module";
 })
 export class TplTimelineModule {
 
-    public static forRoot(config: any): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders {
 
         return {
             ngModule: TplTimelineModule,

@@ -29,19 +29,19 @@ const routes: Routes = [
     imports: [
         BrowserModule,
         RouterModule.forRoot(routes),
-        TplTextModule.forRoot(),
-        TplTimelineModule.forRoot({}),
         NgWordpressServicesModule.forRoot({
             apiUrl: environment.apiUrl,
             staticSharerUrl: environment.staticSharerUrl,
             menuName: 'main'
         }),
-        TplProjectsModule.forRoot(),
-        TplPostsModule.forRoot(),
-        TplCodeblocksModule.forRoot(),
-        TplGalleryModule.forRoot(),
-        TplTextGalleryModule.forRoot(),
-        TplTextMediaSliderModule.forRoot()
+        TplTextModule,
+        TplTimelineModule,
+        TplProjectsModule,
+        TplPostsModule,
+        TplCodeblocksModule,
+        TplGalleryModule,
+        TplTextGalleryModule,
+        TplTextMediaSliderModule
     ],
     providers: [
         {
