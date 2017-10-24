@@ -60,3 +60,10 @@ import {
 * ```ProjectsService```
 * ```TimelineService```
 * ```NavigationService```
+
+## Included Plugins (peer dependencies)
+* https://github.com/orizens/angular2-infinite-scroll
+* https://github.com/KoderLabs/ng2-device-detector
+* (https://github.com/zyra/ngx-facebook)
+* highlight.js - Code Highlighting
+* hammerjs - Touch Gestures
